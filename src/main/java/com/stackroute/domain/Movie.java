@@ -2,9 +2,8 @@ package com.stackroute.domain;
 
 public class Movie {
     Actor actobj;
-
-    public void setActobj(Actor actobj) {
-        this.actobj = actobj;
+    public Movie(Actor actobj){
+        this.actobj  = actobj;
     }
 
     public Actor getActobj() {
@@ -14,7 +13,7 @@ public class Movie {
     @Override
     public String toString() {
         return "Movie{" +
-                "actorName=" + actobj.getName() +"\n"+"actorAge=" + actobj.getAge() +"\n"+ "actorGender=" + actobj.getGender() +
+                "actName=" + actobj.name +"  "+"actAge=" + actobj.age+"  "+"actGender="+ actobj.gender+
                 '}';
     }
 }

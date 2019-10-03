@@ -5,14 +5,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean  id="movobj" class="com.stackroute.domain.Movie">
-        <property name="actobj">
-            <bean id = "actor" class="com.stackroute.domain.Actor">
-                    <property name="name" value="Leonardo"/>
-                    <property name="gender" value="Male"/>
-                    <property name="age" value="48"/>
-            </bean>
-        </property>
-    </bean>
+<bean id="actor" class="com.stackroute.domain.Actor">
+    <constructor-arg name="name" value="Leonardo"/>
+    <constructor-arg name="age" value="30"/>
+    <constructor-arg name="gender" value="male"/>
+</bean>
+
+
+<bean name="mov1, mov2" class="com.stackroute.domain.Movie" scope="singleton">
+    <constructor-arg name="actobj" ref="actor"> </constructor-arg>
+</bean>
+
 
 </beans>

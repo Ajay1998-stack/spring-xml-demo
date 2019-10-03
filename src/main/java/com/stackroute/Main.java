@@ -13,8 +13,9 @@ import org.springframework.core.io.ClassPathResource;
 
 public class Main {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-        Movie movie= context.getBean("movobj",Movie.class);
+//        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+//        Movie movie= context.getBean("movobj",Movie.class);
+        kjdjbfkjebdkjfbkjldfbkjsbdvkjbklj
 
         XmlBeanFactory xmlBeanFactory  = new XmlBeanFactory(new ClassPathResource("beans.xml"));
           Movie movie= xmlBeanFactory.getBean("movobj",Movie.class);

@@ -1,7 +1,15 @@
 package com.stackroute.domain;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Movie {
     Actor actobj;
+
+    public void setActobj(Actor actobj) {
+        this.actobj = actobj;
+    }
+
+
     public Movie(Actor actobj){
         this.actobj  = actobj;
     }

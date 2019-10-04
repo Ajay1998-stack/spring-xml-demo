@@ -4,8 +4,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id ="lifecycle" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="initializer" destroy-method="destroyer"></bean>
 
-<bean id="actor" class="com.stackroute.domain.Actor">
+
+    <bean id="actor" class="com.stackroute.domain.Actor">
     <constructor-arg name="name" value="Leonardo"/>
     <constructor-arg name="age" value="30"/>
     <constructor-arg name="gender" value="male"/>
